@@ -65,7 +65,7 @@ data "aws_iam_policy_document" "emr_autoscaling_role_policy" {
 
     principals = {
       type        = "Service"
-      identifiers = ["elasticmapreduce.amazonaws.com","application-autoscaling.amazonaws.com"]
+      identifiers = ["elasticmapreduce.amazonaws.com", "application-autoscaling.amazonaws.com"]
     }
   }
 }

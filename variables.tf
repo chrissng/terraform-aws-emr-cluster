@@ -53,7 +53,7 @@ variable "additional_master_security_groups" {
 
 variable "bootstrap_action" {
   default = []
-  type = "list"
+  type    = "list"
 }
 
 variable "log_uri" {}

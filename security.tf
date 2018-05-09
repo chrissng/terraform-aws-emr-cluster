@@ -35,21 +35,21 @@ resource "aws_security_group" "service_access" {
 }
 
 resource "aws_security_group_rule" "master_allow_all_egress" {
-  type            = "egress"
-  from_port       = 0
-  to_port         = 65535
-  protocol        = "all"
-  cidr_blocks     = ["0.0.0.0/0"]
+  type        = "egress"
+  from_port   = 0
+  to_port     = 65535
+  protocol    = "all"
+  cidr_blocks = ["0.0.0.0/0"]
 
   security_group_id = "${aws_security_group.emr_master.id}"
 }
 
 resource "aws_security_group_rule" "slave_allow_all_egress" {
-  type            = "egress"
-  from_port       = 0
-  to_port         = 65535
-  protocol        = "all"
-  cidr_blocks     = ["0.0.0.0/0"]
+  type        = "egress"
+  from_port   = 0
+  to_port     = 65535
+  protocol    = "all"
+  cidr_blocks = ["0.0.0.0/0"]
 
   security_group_id = "${aws_security_group.emr_slave.id}"
 }
