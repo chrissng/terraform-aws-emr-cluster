@@ -26,11 +26,7 @@ resource "aws_emr_cluster" "cluster" {
 
   autoscaling_role = "${aws_iam_role.emr_autoscaling_role.arn}"
 
-  bootstrap_action {
-    path = "${var.bootstrap_uri}"
-    name = "${var.bootstrap_name}"
-    args = "${var.bootstrap_args}"
-  }
+  bootstrap_action = "${var.bootstrap_action}"
 
   log_uri      = "${var.log_uri}"
   service_role = "${aws_iam_role.emr_service_role.arn}"
