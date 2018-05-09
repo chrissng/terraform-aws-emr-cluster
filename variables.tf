@@ -52,8 +52,8 @@ variable "additional_master_security_groups" {
 }
 
 variable "bootstrap_action" {
-  default = {}
-  type = "map"
+  default = []
+  type = "list"
 }
 
 variable "log_uri" {}
