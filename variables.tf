@@ -51,7 +51,11 @@ variable "additional_master_security_groups" {
   default = ""
 }
 
-variable "bootstrap_action" {
+variable "bootstrap_name" {}
+
+variable "bootstrap_uri" {}
+
+variable "bootstrap_args" {
   default = []
   type    = "list"
 }
