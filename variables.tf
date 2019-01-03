@@ -31,6 +31,11 @@ variable "applications" {
   type        = "list"
 }
 
+variable "termination_protection" {
+  description = "Switch on/off termination protection"
+  default     = "false"
+}
+
 variable "configurations" {
   description = "JSON array of EMR application configurations"
 }
